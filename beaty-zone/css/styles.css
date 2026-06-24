@@ -1,7 +1,41 @@
+/* play-regular */
+@font-face {
+  font-display: swap;
+  font-family: 'Play';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/play-v21-cyrillic_latin-regular.woff2') format('woff2');
+}
+/* play-700 */
+@font-face {
+  font-display: swap;
+  font-family: 'Play';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/play-v21-cyrillic_latin-700.woff2') format('woff2');
+}
+/* roboto-regular */
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/roboto-v51-cyrillic_latin-regular.woff2') format('woff2');
+}
+/* roboto-600 */
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/roboto-v51-cyrillic_latin-600.woff2') format('woff2');
+}
+
 :root {
   --color-primary-light-blue: #2b7fff;
   --color-primary-dark-blue: #011c44;
   --color-primary-white: #ffffff;
+  --color-primary-black: #000000;
   --color-secondary-light-gray: #747272;
   --color-secondary-dark-gray: #4a4a4a;
   --color-secondary-dark-blue: #011f4a;
@@ -15,6 +49,9 @@
 body {
   color: var(--color-primary-dark-blue);
   margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
 }
 
 footer {
@@ -45,9 +82,20 @@ ul {
   padding: 0;
 }
 
+.capitalize {
+  text-transform: capitalize;
+}
+
 /* Section */
 .section {
   padding: 48px 0;
+}
+
+.section-title {
+  font-family: 'Play', sans-serif;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 100%;
 }
 
 .section-title .accent {
@@ -57,28 +105,48 @@ ul {
 /* Navigation */
 .nav-link {
   color: var(--color-primary-dark-blue);
+  line-height: 100%;
 }
 
 .nav-link:hover {
   color: var(--color-primary-light-blue);
+  font-weight: 700;
 }
 
 /* Banner section */
 .banner-title {
+  line-height: 100%;
+}
+
+.banner-brand {
   color: var(--color-primary-light-blue);
+  font-family: 'Play', sans-serif;
+  font-weight: 700;
+  font-size: 140px;
+  line-height: 114px;
 }
 
 .order-button {
   color: var(--color-primary-white);
   background-color: var(--color-primary-light-blue);
-  border: 1px solid var(--color-primary-light-blue);
+  border: 2px solid var(--color-primary-light-blue);
   border-radius: 32px;
   padding: 16px 32px;
   cursor: pointer;
+  font-weight: 600;
+  line-height: 100%;
+}
+
+.order-button:hover {
+  color: var(--color-primary-dark-blue);
+  background-color: transparent;
 }
 
 .banner-text {
   color: var(--color-secondary-dark-gray);
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
 }
 
 /* Description section */
@@ -86,7 +154,17 @@ ul {
   padding-bottom: 176px;
 }
 
-.description-text .accent {
+.description-text {
+  font-size: 22px;
+  line-height: 38px;
+}
+
+.description-text .brand {
+  font-weight: 600;
+}
+
+.description-text .capitalize {
+  text-transform:;
 }
 
 /* Advantages section */
@@ -94,22 +172,49 @@ ul {
   padding-top: 0;
 }
 
+.advantages-title {
+  text-align: center;
+}
+
+.advantage-text {
+  color: var(--color-primary-black);
+  line-height: 24px;
+  text-align: center;
+}
+
 /* Procedures section */
+.procedures-title {
+  text-align: center;
+}
+
 .procedure-title {
   color: var(--color-primary-white);
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  vertical-align: middle;
 }
 
 /* Location section */
+.location-title {
+  text-align: center;
+  vertical-align: middle;
+}
 
 /* Footer */
 .footer-link {
   color: var(--color-primary-white);
+  font-size: 16px;
+  line-height: 100%;
 }
 
 .footer-link:hover {
   color: var(--color-primary-light-blue);
+  font-weight: 700;
 }
 
 .address-copyright {
   color: var(--color-secondary-light-gray);
+  font-size: 13px;
+  line-height: 100%;
 }
