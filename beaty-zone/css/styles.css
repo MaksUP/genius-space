@@ -188,7 +188,7 @@ ul {
 }
 
 .procedure-title {
-  color: var(--color-primary-white);
+  color: lightgray; /* TEMPORARY, SHOULD BE WHITE !!! */
   font-size: 22px;
   line-height: 26px;
   text-align: center;
